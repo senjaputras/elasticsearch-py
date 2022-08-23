@@ -36,18 +36,18 @@ Python        : 3.9.13 -> Elastic-py modules : 7.17.4
 
 
 
-- ### Connection to Elasticsearch
+- ### Connecting to Elasticsearch
   ```
   es = Elasticsearch (["https://x.x.x.x:x"],basic_auth=("username", "password"),verify_certs=False,ssl_show_warn=False)
   ```
-  I this case the Elasticsearch use Self Signed Certificate, so I disable certificate verify function.
+  In this case the Elasticsearch use Self Signed Certificate, so I disable certificate verify function.
 
 - ### Search all indices (Example)
   ```
   body = { "match_all" : {}}
   ```
 
-- ### Search with Time Range
+- ### Search with Time Range (Example)
   ```
   data={
     "bool": {
