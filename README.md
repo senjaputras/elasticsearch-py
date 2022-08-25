@@ -9,6 +9,7 @@
 
    _**Each Elasticsearch version use different elastic-py modules version**_
 
+<br />
 
 ## QUERY EXAMPLES
   ```
