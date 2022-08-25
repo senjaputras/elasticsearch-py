@@ -7,6 +7,9 @@ Elasticsearch : 7.3.1
 
 Python        : 3.9.13 -> Elastic-py modules : 7.17.4
 
+  _**Each Elasticsearch version use different elastic-py modules version**_
+
+
 ## QUERY EXAMPLES
 
   ```
