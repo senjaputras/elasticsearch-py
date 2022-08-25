@@ -3,11 +3,11 @@
 ## Some functions that I used to query/search data on Elasticsearch using Python
 
 #### VERSIONS
-Elasticsearch : 7.3.1
+        Elasticsearch : 7.3.1
 
-Python        : 3.9.13 -> Elastic-py modules : 7.17.4
+        Python        : 3.9.13 -> Elastic-py modules : 7.17.4
 
-  _**Each Elasticsearch version use different elastic-py modules version**_
+   _**Each Elasticsearch version use different elastic-py modules version**_
 
 
 ## QUERY EXAMPLES
