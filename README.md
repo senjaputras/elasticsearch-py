@@ -11,7 +11,6 @@
 
 
 ## QUERY EXAMPLES
-
   ```
   es = Elasticsearch (["https://x.x.x.x:x"],basic_auth=("username", "password"),verify_certs=False,ssl_show_warn=False)
   body = { "match_all" : {}}
