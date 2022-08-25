@@ -7,7 +7,7 @@ Elasticsearch : 7.3.1
 
 Python        : 3.9.13 -> Elastic-py modules : 7.17.4
 
-## Query with specific time range
+## QUERY EXAMPLES
 
   ```
   es = Elasticsearch (["https://x.x.x.x:x"],basic_auth=("username", "password"),verify_certs=False,ssl_show_warn=False)
@@ -31,10 +31,10 @@ Python        : 3.9.13 -> Elastic-py modules : 7.17.4
         "must_not": []
       }
     }
-  rs = es_src.search(index=[source_index],query=data,size=batch_size,_source_excludes=["dns.response.additionals","dns.response.answers","dns.response.authorities"])
+  rs = es_src.search(index=[source_index],query=data,size=batch_size,_source_excludes=["dns.response","http.response"])
   ```
 
-
+## EXPLAINATIONS
 
 - ### Connecting to Elasticsearch
   ```
@@ -42,12 +42,12 @@ Python        : 3.9.13 -> Elastic-py modules : 7.17.4
   ```
   In this case the Elasticsearch use Self Signed Certificate, so I disable certificate verify function.
 
-- ### Search all indices (Example)
+- ### Query / Search to find all indices
   ```
   body = { "match_all" : {}}
   ```
 
-- ### Search with Time Range (Example)
+- ### Query / Search with Time Range
   ```
   data={
     "bool": {
@@ -66,4 +66,8 @@ Python        : 3.9.13 -> Elastic-py modules : 7.17.4
       "must_not": []
     }
   }
+  ```
+- ### Query / Search Executions
+  ```
+  rs = es_src.search(index=[source_index],query=data,size=batch_size,_source_excludes=["dns.response","http.response"])
   ```
